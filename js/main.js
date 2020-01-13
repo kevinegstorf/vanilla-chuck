@@ -43,7 +43,8 @@ function FetchChuckJokes() {
 
 jokesButton.addEventListener(
   "click",
-  () => {
+  e => {
+    e.preventDefault();
     FetchChuckJokes();
   },
   false
