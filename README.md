@@ -12,6 +12,7 @@
 - add offline mode
 - check a11y
 - make sure lighthouse passes all tests
+- replace &quote with ""
 
 Fixes and features
 Multipages
