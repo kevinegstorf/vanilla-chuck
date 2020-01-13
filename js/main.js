@@ -38,6 +38,5 @@ function FetchChuckJokes() {
 }
 
 jokesButton.addEventListener("click", () => {
-  console.log("jokes");
   FetchChuckJokes();
 });
