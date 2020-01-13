@@ -38,6 +38,12 @@ ul {
     padding: 1em 5em;
 }
 
+@media screen and (max-width: 48rem) {
+    ul {
+        padding: 0;
+    }
+}
+
 li {
     margin-bottom: 10px;
     list-style-type: none;
