@@ -30,7 +30,7 @@ function renderJokes(jokes) {
 }
 
 function FetchChuckJokes() {
-  fetch("http://api.icndb.com/jokes/random/10.")
+  fetch("https://api.icndb.com/jokes/random/10.")
     .then(getJokes)
     .then(makeJokesCollection)
     .then(renderJokes)
