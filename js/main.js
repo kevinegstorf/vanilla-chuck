@@ -25,8 +25,11 @@ function renderJokes(jokes) {
   jokes.map(joke => {
     const li = document.createElement("li");
     const div = document.createElement("div");
+    const span = document.createElement("span");
     div.classList.add("joke-card");
+    span.innerHTML = "&#9825";
 
+    div.appendChild(span);
     li.appendChild(div);
     div.innerText = joke;
     ul.appendChild(li);
