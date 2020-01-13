@@ -13,6 +13,32 @@
 - check a11y
 - make sure lighthouse passes all tests
 
+Fixes and features
+Multipages
+    - login
+- signup
+- All jokes
+- Favorite jokes
+- render new first
+Render images according to screen size
+Onpress even handler for mobile
+Responsive styling
+Search feature
+Change order jokes
+Offline render Jokes that are stored
+And show that app is offline
+Add manifest
+Select element with correct aria attributes
+Add tests
+Basic login with salt based on created at date
+Check if base64 comes out of the box
+404 page
+Webworkers
+Add modernizer 
+Imagery alt attributes
+
+Create checklist for exam
+
 
 
 We can also turn on/off a timer via a button (every 5 seconds) who will add one random joke to the

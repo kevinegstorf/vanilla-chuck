@@ -23,8 +23,12 @@ function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
 
   jokes.map(joke => {
-    let li = document.createElement("li");
-    li.innerText = joke;
+    const li = document.createElement("li");
+    const div = document.createElement("div");
+    div.classList.add("joke-card");
+
+    li.appendChild(div);
+    div.innerText = joke;
     ul.appendChild(li);
   });
 }
@@ -37,6 +41,10 @@ function FetchChuckJokes() {
     .catch(logError);
 }
 
-jokesButton.addEventListener("click", () => {
-  FetchChuckJokes();
-});
+jokesButton.addEventListener(
+  "click",
+  () => {
+    FetchChuckJokes();
+  },
+  false
+);
