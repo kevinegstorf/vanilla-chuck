@@ -11,7 +11,7 @@ h1 {
 }
 
 button {
-    width: 100px;
+    width: 100%;
     height: 40px;
     background-color: hotpink;
     font-size: 1em;
