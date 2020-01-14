@@ -73,12 +73,6 @@ jokesButton.addEventListener(
   "click",
   e => {
     e.preventDefault();
-    const div = document.createElement("div");
-    const body = document.querySelector(".scroll-info-placeholder");
-    div.innerHTML = "Scroll down to see jokes";
-    body.classList.add("scroll-info");
-
-    body.appendChild(div);
     FetchChuckJokes();
   },
   false
