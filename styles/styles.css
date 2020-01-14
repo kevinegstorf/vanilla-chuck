@@ -12,6 +12,7 @@ h1 {
 
 button {
     width: 100%;
+    max-width: 500px;
     height: 57px;
     background-color: hotpink;
     font-size: 27px;
