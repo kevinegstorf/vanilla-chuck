@@ -13,6 +13,15 @@
 
 <body>
     <main class="container">
+        <figure>
+            <picture>
+                <source media="(min-width: 750px)" srcset="./assets/images/chuck_uzi.jpg,
+                ./assets/images/chuck_texas.jpg" />
+                <source media="(min-width: 500px)" srcset="./assets/images/chuck_texas.jpg" />
+                <img src="./assets/images/chuck_karate.jpg" alt="Horses in Hawaii">
+            </picture>
+            <figcaption>Chuck!</figcaption>
+        </figure>
         <!-- <img src="./assets/images/chuck_uzi.jpg" alt="chuck_uzi"> -->
         <span style='font-size:100px;'>&#9825;</span>
         <span style='font-size:100px;'>&#9829;</span>
@@ -22,6 +31,7 @@
         <ul aria-label="jokes container" class="jokes-contianer"></ul>
     </main>
 </body>
+<script src="js/test.js"></script>
 <script src="js/main.js"></script>
 <script src="js/sw.js"></script>
 

@@ -14,7 +14,11 @@ function makeJokesCollection(data) {
 
   data.value.map(joke => {
     // TODO CREATE BETTER STRING FORMATTER FUNCTION
-    item += joke.joke.replace(/&quot;/g, '"');
+    item += joke.joke
+      .replace(/&quot;/g, '"')
+      .split(".")
+      .join(". ");
+
     jokes.push(item);
   });
   return jokes;
@@ -54,9 +58,4 @@ jokesButton.addEventListener(
   false
 );
 
-let example =
-  "Chuck Norris does not &quot;style&quot; his hair. It lays perfectly in place out of sheer terror.";
-
-example = example.replace(/Chuck/g, "Kevin");
-
-console.log(example);
+Test();
