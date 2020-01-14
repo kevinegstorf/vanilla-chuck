@@ -22,6 +22,7 @@ button {
     box-shadow: 4px 5px 23px rgba(0, 0, 0, 0.8);
     transition: box-shadow 0.1s;
     color: white;
+    text-transform: capitalize;
 }
 
 button:active {
@@ -43,6 +44,11 @@ li {
     margin-bottom: 10px;
     list-style-type: none;
     text-align: left;
+}
+
+
+.unchecked-heart {
+    margin-top: 10px;
 }
 
 img {

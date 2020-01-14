@@ -30,16 +30,29 @@ function renderJokes(jokes) {
   jokes.map(joke => {
     const li = document.createElement("li");
     const div = document.createElement("div");
-    const span = document.createElement("span");
-    div.classList.add("card");
-    span.innerHTML = "&#9825";
+    const div2 = document.createElement("div");
+    const p = document.createElement("p");
+    li.classList.add("card");
+    div2.classList.add("unchecked-heart");
+    div2.innerHTML = "&#9825";
 
     // Add heart like button to joke card
+    // Add two divs to card div
+    // Add text in p element
+    // Add p element to card div
+    // add heart to card div
 
-    div.appendChild(span);
+    p.innerText = joke;
+    div.appendChild(p);
     li.appendChild(div);
-    div.innerText = joke;
+    li.appendChild(div2);
     ul.appendChild(li);
+
+    div2.addEventListener("click", e => {
+      e.preventDefault();
+      div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
+      console.log("click", joke);
+    });
   });
 }
 

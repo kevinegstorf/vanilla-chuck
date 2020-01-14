@@ -17,6 +17,7 @@ security requirements:
   scroll back to top button after x height;
 ### Tomorrow
 - add manifest 
+- add assets for PWA
 - add offline mode
 - make 404 work
 - finish all service worker stuff
@@ -49,6 +50,7 @@ security requirements:
 - Add modernizer 
 - Add tests
 - Add Webworkers for invinite scroll
+
 
 ## Bonus
 
