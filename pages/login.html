@@ -13,12 +13,22 @@
     <main class="container">
         <nav>
             <ul>
-                <li><a href="/pages/favorite_jokes.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="/pages/favorite_jokes.html">Favorites</a></li>
-                <li><a href="/pages/login.html">login</a></li>
-                <li><a href="/pages/register.html">Register</a></li>
+                <li class="selected-page"><a href="/pages/login.html">Login</a></li>
             </ul>
         </nav>
+        <div class="sign-in">
+            <h1>Login</h1>
+            <form action="">
+                <label for="username"></label>
+                <input type="text" id='username' placeholder='enter username'>
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="enter password">
+                <button>Login</button>
+                <a class="sign_up-link" href="/pages/signup.html">Click this link to sign up</a>
+            </form>
+        </div>
     </main>
 </body>
 
