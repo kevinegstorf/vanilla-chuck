@@ -11,10 +11,11 @@ security requirements:
 
 
 ### Today
-- add all pages with styling
-- add favorite button that can be toggled
+- add all pages with styling √
+- add favorite button that can be toggled √
 - on click focus on the first joke
   scroll back to top button after x height;
+
 ### Tomorrow
 - add manifest 
 - add assets for PWA
