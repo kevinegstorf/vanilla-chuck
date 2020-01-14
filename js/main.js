@@ -34,6 +34,8 @@ function renderJokes(jokes) {
     div.classList.add("card");
     span.innerHTML = "&#9825";
 
+    // Add heart like button to joke card
+
     div.appendChild(span);
     li.appendChild(div);
     div.innerText = joke;
