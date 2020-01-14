@@ -150,7 +150,7 @@ input[type=email]{
     max-width: 166px;
     width: 100%;
     align-self: center;
-    font-size: 20px;
+    font-size: 24px;
     caret-color: hotpink;
     color: limegreen
 }
