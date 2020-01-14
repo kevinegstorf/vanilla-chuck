@@ -1,7 +1,7 @@
 const jokesButton = document.getElementById("jokes");
 
 function logError(error) {
-  console.log("Looks like there was a problem:", error);
+  // console.log("Looks like there was a problem:", error);
 }
 
 function getJokes(data) {
