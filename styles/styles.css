@@ -39,13 +39,6 @@ ul {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 48rem) {
-    ul {
-        padding: 0;
-        margin-top: 10px;
-    }
-}
-
 li {
     margin-bottom: 10px;
     list-style-type: none;
@@ -138,7 +131,6 @@ nav ul li a:hover {
     color: transparent;
  }
 
-
 input[type=text],
 input[type=password],
 input[type=date], 
@@ -190,4 +182,17 @@ input[type=email]{
 :-ms-input-placeholder {  
     text-align: center; 
     color: limegreen;
+}
+
+@media screen and (max-width: 48rem) {
+    ul {
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .favorites_card input[type=text]{
+        width: 90%;
+        max-width: 390px;
+        margin-top: 36px;
+     }
 }
