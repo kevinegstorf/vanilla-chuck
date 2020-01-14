@@ -73,7 +73,7 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-.joke-card {
+.card {
     background-color: white;
     border-radius: 5px;
     padding: 16px;
@@ -89,7 +89,7 @@ nav ul li a:hover {
      color: hotpink;
  }
 
- .sign-in {
+ .chuck_form {
     margin: 0 auto;
     margin-top: 90px;
     background-color: white;
@@ -100,13 +100,16 @@ nav ul li a:hover {
     height: 300px;
  }
 
+ .sign_up {
+     height: 430px;
+ }
  form {
     display: flex;
     flex-direction: column;
  }
 
 
- .sign-in button {
+ .chuck_form button {
     align-self: center;
     margin: 20px;
  }
@@ -116,9 +119,25 @@ nav ul li a:hover {
      font-size: 18px;
  }
 
+ .favorites_card {
+    max-width: 478px;
+    height: 455px;
+    margin-top: 30px;
+ }
+
+ .favorites_card input[type=text]{
+    max-width: 282px;
+ }
+
+ .favorites_card button {
+    width: 293px;
+ }
+
 
 input[type=text],
-input[type=password]  {
+input[type=password],
+input[type=date], 
+input[type=email]{
     border: none;
     border-bottom: 2px solid limegreen;
     background-color: white;
@@ -129,6 +148,7 @@ input[type=password]  {
     align-self: center;
     font-size: 16px;
     caret-color: hotpink;
+    color: limegreen
 }
 
 *:focus {
@@ -143,18 +163,26 @@ input[type=password]  {
     background: #ffb7b7; /* Gecko Browsers */
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: limegreen;
+  }
+
 ::-webkit-input-placeholder {
     text-align: center;
+    color: limegreen;
 }
  
 :-moz-placeholder { /* Firefox 18- */
     text-align: center;  
+    color: limegreen;
 }
  
 ::-moz-placeholder {  /* Firefox 19+ */
     text-align: center;  
+    color: limegreen;
 }
  
 :-ms-input-placeholder {  
     text-align: center; 
+    color: limegreen;
 }

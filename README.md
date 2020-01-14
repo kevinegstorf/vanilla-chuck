@@ -37,6 +37,10 @@ Check if base64 comes out of the box
 Webworkers
 Add modernizer 
 Imagery alt attributes
+Form validation
+
+on click focus on the first joke
+scroll back to top button after x height;
 
 Create checklist for exam
 

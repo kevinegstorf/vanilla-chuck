@@ -31,7 +31,7 @@ function renderJokes(jokes) {
     const li = document.createElement("li");
     const div = document.createElement("div");
     const span = document.createElement("span");
-    div.classList.add("joke-card");
+    div.classList.add("card");
     span.innerHTML = "&#9825";
 
     div.appendChild(span);
