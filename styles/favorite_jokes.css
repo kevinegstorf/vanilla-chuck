@@ -1,0 +1,27 @@
+.favorites_card {
+    max-width: 478px;
+    margin-top: 30px;
+ }
+
+ .favorites_card input[type=text]{
+    width: 100%;
+    max-width: 390px;
+    margin-top: 36px;
+ }
+
+ .favorites_card button {
+    max-width: 400px;
+ }
+
+ @media screen and (max-width: 48rem) {
+    .favorites_card input[type=text]{
+        width: 90%;
+        max-width: 390px;
+        margin-top: 36px;
+     }
+
+     .favorites_card button {
+        width: 90%;
+        font-size: 20px;
+     }
+}
