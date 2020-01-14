@@ -13,10 +13,9 @@ security requirements:
 ### Today
 - add all pages with styling √
 - add favorite button that can be toggled √
-- on click focus on the first joke
-  scroll back to top button after x height;
 
 ### Tomorrow
+- add service workers and create cache for code
 - add manifest 
 - add assets for PWA
 - add offline mode
@@ -51,6 +50,8 @@ security requirements:
 - Add modernizer 
 - Add tests
 - Add Webworkers for invinite scroll
+- scroll back to top button after x height
+- fix styling signup page
 
 
 ## Bonus
