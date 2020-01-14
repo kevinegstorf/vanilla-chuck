@@ -198,5 +198,6 @@ input[type=email]{
 
      .favorites_card button {
         width: 90%;
+        font-size: 20px;
      }
 }
