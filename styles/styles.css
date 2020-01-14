@@ -121,16 +121,18 @@ nav ul li a:hover {
 
  .favorites_card {
     max-width: 478px;
-    height: 455px;
+    /* height: 455px; */
     margin-top: 30px;
  }
 
  .favorites_card input[type=text]{
-    max-width: 282px;
+    max-width: 390px;
+    margin-top: 36px;
  }
 
  .favorites_card button {
-    width: 293px;
+    /* width: 293px; */
+    max-width: 400px;
  }
 
  label {
