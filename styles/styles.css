@@ -133,6 +133,10 @@ nav ul li a:hover {
     width: 293px;
  }
 
+ label {
+    color: transparent;
+ }
+
 
 input[type=text],
 input[type=password],
