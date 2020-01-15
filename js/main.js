@@ -16,7 +16,7 @@ function makeJokesCollection(data) {
   // Adds joke to the Jokes array
   data.value.map(joke => {
     // formats text string correctly
-    item += joke.joke
+    item = joke.joke
       .replace(/&quot;/g, '"')
       .split(".")
       .join(". ");
