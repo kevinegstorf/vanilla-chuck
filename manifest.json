@@ -2,7 +2,7 @@
     "name": "Vanilla Chuck",
     "short_name": "Vanilla Chuck",
     "lang": "en-US",
-    "start-url": "https://festive-leavitt-932080.netlify.com/index.html",
+    "start_url": "/index.html",
     "display": "standalone",
     "theme_color": "#ff69b4",
     "background_color": "#32cd32",
