@@ -31,7 +31,7 @@ self.addEventListener("fetch", event => {
       .match(event.request)
       .then(response => {
         if (response) {
-          console.log("Found ", event.request.url, " in cache");
+          // console.log("Found ", event.request.url, " in cache");
           return response;
         }
         console.log("Network request for ", event.request.url);
@@ -46,14 +46,14 @@ self.addEventListener("fetch", event => {
         });
       })
       .catch(error => {
-        console.log("Error, ", error);
+        // console.log("Error, ", error);
         return caches.match("pages/offline.html");
       })
   );
 });
 
 self.addEventListener("activate", event => {
-  console.log("Activating new service worker...");
+  // console.log("Activating new service worker...");
 
   const cacheWhitelist = [staticCacheName];
 
