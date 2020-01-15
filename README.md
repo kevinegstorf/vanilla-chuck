@@ -15,14 +15,12 @@ security requirements:
 - add favorite button that can be toggled √
 
 ### Tomorrow
-- add service workers and create cache for code
+- add service workers and create cache for code √
 - add manifest 
-- add assets for PWA
-- add offline mode
-- make 404 work
-- finish all service worker stuff
-
-## Later
+- add assets for PWA √
+- add offline mode √
+- make 404 work √
+- finish all basic service worker stuff√
 - add client side DB in localstorage
     - create favorites in DB
     - store selected joke as favorite
@@ -30,6 +28,8 @@ security requirements:
     - make PW salt with date.now
     - Basic login with salt based on created at date
     - Check if base64 comes out of the box
+
+## Later
 - add joke search feature
 - logout
 - make route only visible when logged in
@@ -52,7 +52,8 @@ security requirements:
 - Add Webworkers for invinite scroll
 - scroll back to top button after x height
 - fix styling signup page
-
+- add labels correct on favorite jokes page
+- add labels correct on signup page
 
 ## Bonus
 
