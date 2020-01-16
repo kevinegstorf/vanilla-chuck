@@ -21,21 +21,30 @@ security requirements:
 - add offline mode √
 - make 404 work √
 - finish all basic service worker stuff√
-- add client side DB in localstorage
-    - create favorites in DB
+- add client side DB in localstorage √
+    - create favorites in DB √
+    - show all favortis from DB √
     - store selected joke as favorite
-    - create user in DB 
-    - make PW salt with date.now
-    - Basic login with salt based on created at date
-    - Check if base64 comes out of the box
+    - add joke search feature 
+- fix styles
+- look at lighthouse and fix low numbers
+- add title and icons on each page
+- add labels correct on favorite jokes page
+- add labels correct on signup page
+- fix styling signup page
+- check lighthouse to see what needs to be done
 
 ## Later
-- add joke search feature
+- Change order jokes
+- form validation clientside
+- form validation from db error returnen
+- create user in DB 
+- make PW salt with date.now
+- Basic login with salt based on created at date
+- Check if base64 comes out of the box
 - logout
 - make route only visible when logged in
-- check lighthouse to see what needs to be done
-- clean up file structure
-- form validation
+- clean up file structure √
 - login should have a session time
 - password needs criterea
     Passwords must include one increasing straight of at least three letters, like abc , cde , fgh ,
@@ -45,24 +54,20 @@ security requirements:
     Passwords must contain at least two non-overlapping pairs of letters, like aa, bb, or cc.
     Passwords cannot be longer than 32 characters.
     Passwords can only contain lower case alphabetic characters.
-- Change order jokes
+
 - Create checklist for exam
 - Add modernizer 
 - Add tests
 - Add Webworkers for invinite scroll
 - scroll back to top button after x height
-- fix styling signup page
-- add labels correct on favorite jokes page
-- add labels correct on signup page
+
+
 
 ## Bonus
 
 We can also turn on/off a timer via a button (every 5 seconds) who will add one random joke to the
 favourites list http://api.icndb.com/jokes/random/1 until the list has 10 items.
 
-## DB
 
-- add id's to jokes
-- how to selected and store them in de DB??
 
 
