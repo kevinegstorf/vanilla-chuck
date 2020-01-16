@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <header class="container">
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -20,17 +20,23 @@
                 <li class="selected-page"><a href="/pages/login.html">Login</a></li>
             </ul>
         </nav>
+    </header>
+    <main class="container">
         <div class="chuck_form card">
             <h1>Login</h1>
             <form action="">
-                <label for="username">
-                    input username
-                    <input type="text" id='username' placeholder='enter username'>
-                </label>
-                <label for="password">
-                    input password
-                    <input type="password" id="password" placeholder="enter password">
-                </label>
+                <div class="form-wrapper">
+                    <div class='form-element'>
+                        <label for="username">
+                            Email
+                        </label>
+                        <input type="text" id='username' placeholder='enter username'>
+                    </div>
+                    <div class='form-element'>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="enter password">
+                    </div>
+                </div>
                 <button ontouchstart>Login</button>
                 <a class="bottom_auth_link" href="/pages/signup.html">Click this link to sign up</a>
             </form>

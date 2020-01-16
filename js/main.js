@@ -9,55 +9,53 @@ function getJokes(data) {
 }
 
 function makeJokesCollection(data) {
-  // Initialize types needed to add joke in an Array
-  let item = "";
-  let jokes = [];
-
   // Adds joke to the Jokes array
-  data.value.map(joke => {
+  return data.value.map(joke => {
     // formats text string correctly
-    item = joke.joke
+    return joke.joke
       .replace(/&quot;/g, '"')
       .split(".")
       .join(". ");
-
-    jokes.push(item);
   });
-  return jokes;
+}
+
+function renderJoke(joke, i) {
+  // creates elements to make Joke Card
+  const li = document.createElement("li");
+  const div = document.createElement("div");
+  const div2 = document.createElement("div");
+  const p = document.createElement("p");
+
+  // adds classes to created elements for Joke
+  li.classList.add("card");
+  div2.classList.add("unchecked-heart");
+  div2.setAttribute("id", i);
+
+  // Adds Empty Heart icon to Joke Card
+  div2.innerHTML = "&#9825";
+
+  // Adds Joke to paragraph element
+  p.innerText = joke;
+
+  // Appending Children to build Card element correctly
+  div.appendChild(p);
+  li.appendChild(div);
+  li.appendChild(div2);
+
+  // Heart icon Click Handler to toggle favorite Joke.
+  div2.addEventListener("click", e => {
+    e.preventDefault();
+    div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
+    console.log("click", joke);
+  });
+  return li;
 }
 
 function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
 
-  jokes.map(joke => {
-    // creates elements to make Joke Card
-    const li = document.createElement("li");
-    const div = document.createElement("div");
-    const div2 = document.createElement("div");
-    const p = document.createElement("p");
-
-    // adds classes to created elements for Joke
-    li.classList.add("card");
-    div2.classList.add("unchecked-heart");
-
-    // Adds Empty Heart icon to Joke Card
-    div2.innerHTML = "&#9825";
-
-    // Adds Joke to paragraph element
-    p.innerText = joke;
-
-    // Appending Children to build Card element correctly
-    div.appendChild(p);
-    li.appendChild(div);
-    li.appendChild(div2);
-    ul.appendChild(li);
-
-    // Heart icon Click Handler to toggle favorite Joke.
-    div2.addEventListener("click", e => {
-      e.preventDefault();
-      div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
-      console.log("click", joke);
-    });
+  jokes.map((joke, i) => {
+    ul.appendChild(renderJoke(joke, i));
   });
 }
 

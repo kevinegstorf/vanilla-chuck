@@ -16,7 +16,7 @@ security requirements:
 
 ### Tomorrow
 - add service workers and create cache for code √
-- add manifest 
+- add manifest  √
 - add assets for PWA √
 - add offline mode √
 - make 404 work √
@@ -59,5 +59,10 @@ security requirements:
 
 We can also turn on/off a timer via a button (every 5 seconds) who will add one random joke to the
 favourites list http://api.icndb.com/jokes/random/1 until the list has 10 items.
+
+## DB
+
+- add id's to jokes
+- how to selected and store them in de DB??
 
 

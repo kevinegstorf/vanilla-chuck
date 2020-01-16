@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <script type="text/javascript" src="/js/db/idb.js"></script>
+    <script type="text/javascript" src="/js/db/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,10 +31,12 @@
                 <button aria-label="search button" ontouchstart>🔎</button>
             </div>
             <h3> _ <br> Or <br> _ </h3>
-            <button ontouchstart>Show All Favorite Jokes</button>
+            <button id="show-favs" ontouchstart>Show All Favorite Jokes</button>
         </div>
+        <ul aria-label="jokes container" class="jokes-contianer" id="joke-placeholder"></ul>
     </main>
 
 </body>
+<script src="/js/favorite_jokes.js"></script>
 
 </html>
