@@ -67,6 +67,11 @@ nav ul li a:hover {
     text-decoration: none;
 } 
 
+nav ul li a:focus {
+    color: hotpink;
+    text-decoration: none;
+}
+
 form {
     display: flex;
     flex-direction: column;
