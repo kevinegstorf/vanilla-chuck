@@ -13,10 +13,10 @@ const filesToCache = [
   "pages/offline.html"
 ];
 
-const staticCacheName = "vanilla-chuck-pages-cache-v5";
+const staticCacheName = "vanilla-chuck-pages-cache-v6.0.1";
 
 self.addEventListener("install", event => {
-  // console.log("Attempting to install service worker and cache static assets");
+  console.log("Attempting to install service worker and cache static assets");
   event.waitUntil(
     caches.open(staticCacheName).then(cache => {
       return cache.addAll(filesToCache);
@@ -25,16 +25,16 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("fetch", event => {
-  // console.log("Fetch event for ", event.request.url);
+  console.log("Fetch event for ", event.request.url);
   event.respondWith(
     caches
       .match(event.request)
       .then(response => {
         if (response) {
-          // console.log("Found ", event.request.url, " in cache");
+          console.log("Found ", event.request.url, " in cache");
           return response;
         }
-        // console.log("Network request for ", event.request.url);
+        console.log("Network request for ", event.request.url);
         return fetch(event.request).then(response => {
           if (response.status === 404) {
             return caches.match("pages/404.html");
@@ -46,14 +46,14 @@ self.addEventListener("fetch", event => {
         });
       })
       .catch(error => {
-        // console.log("Error, ", error);
+        console.log("Error, ", error);
         return caches.match("pages/offline.html");
       })
   );
 });
 
 self.addEventListener("activate", event => {
-  // console.log("Activating new service worker...");
+  console.log("Activating new service worker...");
 
   const cacheWhitelist = [staticCacheName];
 
@@ -61,7 +61,6 @@ self.addEventListener("activate", event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          return caches.delete();
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }

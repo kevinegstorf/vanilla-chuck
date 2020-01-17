@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="fetches chuck norris jokes and let you store your favorites">
-    <link rel="preload" as="styles" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/global_styles.css">
     <link rel="manifest" href="/manifest.json">
 
@@ -42,7 +41,8 @@
                 <source media="(min-width: 750px)" srcset="./assets/images/chuck_uzi.jpg,
                 ./assets/images/chuck_texas.jpg" />
                 <source media="(min-width: 500px)" srcset="./assets/images/chuck_texas.jpg" />
-                <img src="./assets/images/chuck_karate.jpg" alt="image of chuck norris">
+                <img aria-label="image of the legend Chuck Norris" src="./assets/images/chuck_karate.jpg"
+                    alt="image of chuck norris">
             </picture>
             <figcaption>Chuck!</figcaption>
         </figure>

@@ -121,7 +121,10 @@ input[type=email]{
 
  .chuck_form button {
     align-self: center;
-    margin: 20px;
+ }
+
+ .button_wrapper {
+     margin: 20px 0;
  }
 
  .form-element {

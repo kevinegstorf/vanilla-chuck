@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <header class="container">
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -36,16 +36,32 @@
                 <li><a href="/pages/login.html">Login</a></li>
             </ul>
         </nav>
+    </header>
+    <main class="container">
+
         <div class="chuck_form card favorites_card">
             <h1>Favorite Jokes</h1>
-            <div>
-                <label for="search"><input type="text" value="" id="search" placeholder="search">
-                </label>
-                <button aria-label="search button" ontouchstart>🔎</button>
+            <div class="form-wrapper">
+                <div>
+                    <div class='form-element'>
+                        <label for="search">
+                            searchfield
+                        </label>
+                        <input type="text" value="" id="search" placeholder="search">
+                    </div>
+                    <div class="button_wrapper">
+                        <button aria-label="search button" ontouchstart>🔎</button>
+                    </div>
+                </div>
+                <h3> _ <br> Or <br> _ </h3>
+                <!-- TODO SHOW MESSAGE THAT JOKES ARE CLEARED -->
+                <div class="button_wrapper">
+                    <button id="clear-all-jokes" ontouchstart>Clear Jokes</button>
+                </div>
+                <div class="button_wrapper">
+                    <button id="show-favs" ontouchstart>Show All Favorite Jokes</button>
+                </div>
             </div>
-            <h3> _ <br> Or <br> _ </h3>
-            <button id="clear-all-jokes" ontouchstart>Clear Jokes</button>
-            <button id="show-favs" ontouchstart>Show All Favorite Jokes</button>
         </div>
         <ul aria-label="jokes container" class="jokes-contianer" id="joke-placeholder"></ul>
     </main>
