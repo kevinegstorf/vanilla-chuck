@@ -21,7 +21,7 @@ const idbApp = (function() {
     return;
   }
 
-  var dbPromise = idb.open("vanilla-chuck", 6, function(upgradeDb) {
+  var dbPromise = idb.open("vanilla-chuck", 7, function(upgradeDb) {
     switch (upgradeDb.oldVersion) {
       case 0:
       // a placeholder case so that the switch block will
