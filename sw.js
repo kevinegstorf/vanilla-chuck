@@ -16,7 +16,7 @@ const filesToCache = [
 const staticCacheName = "vanilla-chuck-pages-cache-v2";
 
 self.addEventListener("install", event => {
-  console.log("Attempting to install service worker and cache static assets");
+  // console.log("Attempting to install service worker and cache static assets");
   event.waitUntil(
     caches.open(staticCacheName).then(cache => {
       return cache.addAll(filesToCache);

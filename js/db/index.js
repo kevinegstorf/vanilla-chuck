@@ -21,7 +21,7 @@ var idbApp = (function() {
     return;
   }
 
-  var dbPromise = idb.open("vanilla-chuck", 5, function(upgradeDb) {
+  var dbPromise = idb.open("vanilla-chuck", 6, function(upgradeDb) {
     switch (upgradeDb.oldVersion) {
       case 0:
       // a placeholder case so that the switch block will
@@ -92,7 +92,6 @@ var idbApp = (function() {
       store
         .getAll()
         .then(e => {
-          // TODO checken of dit niet ook met foreach kan!!
           e.map(joke => {
             const li = document.createElement("li");
             li.classList.add("card");
@@ -105,11 +104,28 @@ var idbApp = (function() {
     });
   }
 
+  function saveJoke(joke) {
+    dbPromise
+      .then(function(db) {
+        const tx = db.transaction("jokes", "readwrite");
+        const store = tx.objectStore("jokes");
+
+        // var item = {
+        //   id: 3000000,
+        //   joke: joke,
+        //   categories: []
+        // };
+        store.add(joke);
+        return tx.complete;
+      })
+      .then(function() {
+        console.log("added item to the store os!");
+      });
+  }
   return {
     dbPromise: dbPromise,
     addJokes: addJokes,
-    getAllJokes: getAllJokes
+    getAllJokes: getAllJokes,
+    saveJoke: saveJoke
   };
 })();
-
-idbApp.addJokes();

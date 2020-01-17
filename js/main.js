@@ -12,14 +12,20 @@ function makeJokesCollection(data) {
   // Adds joke to the Jokes array
   return data.value.map(joke => {
     // formats text string correctly
-    return joke.joke
-      .replace(/&quot;/g, '"')
-      .split(".")
-      .join(". ");
+
+    return {
+      id: joke.id,
+      joke: joke.joke
+        .replace(/&quot;/g, '"')
+        .split(".")
+        .join(". "),
+      categories: joke.categories
+    };
   });
 }
 
 function renderJoke(joke, i) {
+  console.log("renderJoke", joke);
   // creates elements to make Joke Card
   const li = document.createElement("li");
   const div = document.createElement("div");
@@ -35,7 +41,7 @@ function renderJoke(joke, i) {
   div2.innerHTML = "&#9825";
 
   // Adds Joke to paragraph element
-  p.innerText = joke;
+  p.innerText = joke.joke;
 
   // Appending Children to build Card element correctly
   div.appendChild(p);
@@ -46,6 +52,7 @@ function renderJoke(joke, i) {
   div2.addEventListener("click", e => {
     e.preventDefault();
     div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
+    idbApp.saveJoke(joke);
     console.log("click", joke);
   });
   return li;
@@ -53,6 +60,7 @@ function renderJoke(joke, i) {
 
 function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
+  console.log("renderJokes", jokes);
 
   jokes.map((joke, i) => {
     ul.appendChild(renderJoke(joke, i));
