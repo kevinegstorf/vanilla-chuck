@@ -127,10 +127,19 @@ const idbApp = (function() {
         console.log("added item to the store os!");
       });
   }
+
+  function removeAllJokes() {
+    dbPromise.then(function(db) {
+      var tx = db.transaction("jokes", "readwrite");
+      var store = tx.objectStore("jokes");
+      store.clear();
+    });
+  }
   return {
     dbPromise: dbPromise,
     addJokes: addJokes,
     getAllJokes: getAllJokes,
-    saveJoke: saveJoke
+    saveJoke: saveJoke,
+    removeAllJokes: removeAllJokes
   };
 })();

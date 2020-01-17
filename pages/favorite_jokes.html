@@ -2,15 +2,26 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="/js/db/idb.js"></script>
-    <script type="text/javascript" src="/js/db/index.js"></script>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#ff69b4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description"
-        content="Joke Search page for app that fetches chuck norris jokes and let you store your favorites">
+    <meta name="Description" content="fetches chuck norris jokes and let you store your favorites">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/global_styles.css">
-    <link rel="stylesheet" href="../styles/favorite_jokes.css">
+    <link rel="manifest" href="../manifest.json">
+
+    <link rel="icon" sizes="128x128" href="../assets/images/touch/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="../assets/images/touch/icon-128x128.png">
+    <link rel="icon" sizes="192x192" href="../assets/images/touch/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/touch/icon-192x192.png">
+    <link rel="icon" sizes="256x256" href="../assets/images/touch/icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="../assets/images/touch/icon-256x256.png">
+    <link rel="icon" sizes="384x384" href="../assets/images/touch/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="../assets/images/touch/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="../assets/images/touch/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="../assets/images/touch/icon-512x512.png">
+    <title>Vanilla Chuck</title>
     <title>Document</title>
 </head>
 
@@ -31,6 +42,7 @@
                 <button aria-label="search button" ontouchstart>🔎</button>
             </div>
             <h3> _ <br> Or <br> _ </h3>
+            <button id="clear-all-jokes" ontouchstart>Clear Jokes</button>
             <button id="show-favs" ontouchstart>Show All Favorite Jokes</button>
         </div>
         <ul aria-label="jokes container" class="jokes-contianer" id="joke-placeholder"></ul>
