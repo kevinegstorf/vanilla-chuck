@@ -10,12 +10,19 @@ The login form should consist of a username and password which must comply to th
 security requirements:
 
 
-### Today
+### Done
 - add all pages with styling √
 - add favorite button that can be toggled √
 
-### Tomorrow
+### Today
+- remove console logs
 - add service workers and create cache for code √
+- check lighthouse to see what needs to be done
+- fix styles
+- add title and icons on each page
+- add labels correct on favorite jokes page
+- add labels correct on signup page
+- fix styling signup page
 - add manifest  √
 - add assets for PWA √
 - add offline mode √
@@ -24,17 +31,11 @@ security requirements:
 - add client side DB in localstorage √
     - create favorites in DB √
     - show all favortis from DB √
-    - store selected joke as favorite
+    - store selected joke as favorite √
     - add joke search feature 
-- fix styles
-- look at lighthouse and fix low numbers
-- add title and icons on each page
-- add labels correct on favorite jokes page
-- add labels correct on signup page
-- fix styling signup page
-- check lighthouse to see what needs to be done
 
 ## Later
+- show no jokes selected and redirect to home
 - Change order jokes
 - form validation clientside
 - form validation from db error returnen
