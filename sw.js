@@ -13,7 +13,7 @@ const filesToCache = [
   "pages/offline.html"
 ];
 
-const staticCacheName = "vanilla-chuck-pages-cache-v2";
+const staticCacheName = "vanilla-chuck-pages-cache-v3";
 
 self.addEventListener("install", event => {
   // console.log("Attempting to install service worker and cache static assets");
