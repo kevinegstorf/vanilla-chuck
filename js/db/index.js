@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-var idbApp = (function() {
+const idbApp = (function() {
   "use strict";
 
   if (!("indexedDB" in window)) {
@@ -100,7 +100,18 @@ var idbApp = (function() {
             li.innerHTML = joke.joke;
           });
         })
-        .catch(err => console.log(err));
+        .then(function(joke) {
+          if (joke === undefined) {
+            const li = document.createElement("li");
+            li.classList.add("card");
+            const parent = document.getElementById("joke-placeholder");
+            parent.appendChild(li);
+            li.innerHTML = "no joke selected";
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     });
   }
 
@@ -109,12 +120,6 @@ var idbApp = (function() {
       .then(function(db) {
         const tx = db.transaction("jokes", "readwrite");
         const store = tx.objectStore("jokes");
-
-        // var item = {
-        //   id: 3000000,
-        //   joke: joke,
-        //   categories: []
-        // };
         store.add(joke);
         return tx.complete;
       })
