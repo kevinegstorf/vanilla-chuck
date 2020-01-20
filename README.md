@@ -13,16 +13,12 @@ security requirements:
 ### Done
 - add all pages with styling √
 - add favorite button that can be toggled √
-
-### Today
-- remove console logs
 - add service workers and create cache for code √
-- check lighthouse to see what needs to be done
-- fix styles
-- add title and icons on each page
-- add labels correct on favorite jokes page
-- add labels correct on signup page
-- fix styling signup page
+- check lighthouse to see what needs to be done √
+- add title and icons on each page √
+- add labels correct on favorite jokes page √
+- add labels correct on signup page √
+- fix styling signup page √
 - add manifest  √
 - add assets for PWA √
 - add offline mode √
@@ -32,9 +28,17 @@ security requirements:
     - create favorites in DB √
     - show all favortis from DB √
     - store selected joke as favorite √
-    - add joke search feature 
+- remove console logs√
+- fix bug when no there are no saved jokes√
+- removed rendered saved jokes when clear button is pressed
 
-## Later
+### Monday
+- refactor 
+- fix styles
+    - add joke search feature 
+- fix SW clear cache bug(1/2)
+
+## 
 - show no jokes selected and redirect to home
 - Change order jokes
 - form validation clientside
@@ -42,7 +46,7 @@ security requirements:
 - create user in DB 
 - make PW salt with date.now
 - Basic login with salt based on created at date
-- Check if base64 comes out of the box
+- Add base64 https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 - logout
 - make route only visible when logged in
 - clean up file structure √

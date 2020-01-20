@@ -25,7 +25,6 @@ function makeJokesCollection(data) {
 }
 
 function renderJoke(joke, i) {
-  console.log("renderJoke", joke);
   // creates elements to make Joke Card
   const li = document.createElement("li");
   const div = document.createElement("div");
@@ -53,14 +52,12 @@ function renderJoke(joke, i) {
     e.preventDefault();
     div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
     idbApp.saveJoke(joke);
-    console.log("click", joke);
   });
   return li;
 }
 
 function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
-  console.log("renderJokes", jokes);
 
   jokes.map((joke, i) => {
     ul.appendChild(renderJoke(joke, i));

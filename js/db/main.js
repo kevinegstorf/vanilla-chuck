@@ -111,13 +111,11 @@ var idbApp = (function() {
       ];
       return Promise.all(
         items.map(function(item) {
-          console.log("Adding item: ", item);
           return store.add(item);
         })
       )
         .catch(function(e) {
           tx.abort();
-          console.log(e);
         })
         .then(function() {
           console.log("All items added successfully!");

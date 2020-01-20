@@ -71,24 +71,20 @@ const idbApp = (function() {
       ];
       return Promise.all(
         items.map(function(item) {
-          console.log("Adding item: ", item);
           return store.add(item);
         })
-      )
-        .catch(function(e) {
-          tx.abort();
-          console.log(e);
-        })
-        .then(function() {
-          console.log("All items added successfully!");
-        });
+      ).catch(function(e) {
+        tx.abort();
+      });
     });
   }
 
   function getAllJokes() {
     dbPromise.then(function(db) {
-      var tx = db.transaction("jokes", "readwrite");
-      var store = tx.objectStore("jokes");
+      const tx = db.transaction("jokes", "readwrite");
+      const store = tx.objectStore("jokes");
+      let hasJokes = false;
+
       store
         .getAll()
         .then(e => {
@@ -98,15 +94,17 @@ const idbApp = (function() {
             const parent = document.getElementById("joke-placeholder");
             parent.appendChild(li);
             li.innerHTML = joke.joke;
+            hasJokes = true;
           });
         })
-        .then(function(joke) {
-          if (joke === undefined) {
+        .then(function() {
+          if (!hasJokes) {
             const li = document.createElement("li");
             li.classList.add("card");
             const parent = document.getElementById("joke-placeholder");
             parent.appendChild(li);
-            li.innerHTML = "no joke selected";
+            li.innerHTML =
+              "no joke selected go to the home page to select a joke";
           }
         })
         .catch(err => {
@@ -116,22 +114,24 @@ const idbApp = (function() {
   }
 
   function saveJoke(joke) {
-    dbPromise
-      .then(function(db) {
-        const tx = db.transaction("jokes", "readwrite");
-        const store = tx.objectStore("jokes");
-        store.add(joke);
-        return tx.complete;
-      })
-      .then(function() {
-        console.log("added item to the store os!");
-      });
+    dbPromise.then(function(db) {
+      const tx = db.transaction("jokes", "readwrite");
+      const store = tx.objectStore("jokes");
+      store.add(joke);
+      return tx.complete;
+    });
   }
 
   function removeAllJokes() {
     dbPromise.then(function(db) {
-      var tx = db.transaction("jokes", "readwrite");
-      var store = tx.objectStore("jokes");
+      const tx = db.transaction("jokes", "readwrite");
+      const store = tx.objectStore("jokes");
+      const storedJokes = document.querySelectorAll("li.card");
+
+      storedJokes.forEach(function(node) {
+        node.parentNode.removeChild(node);
+      });
+
       store.clear();
     });
   }
