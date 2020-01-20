@@ -95,6 +95,7 @@ input[type=email]{
     font-size: 24px;
     caret-color: hotpink;
     color: limegreen;
+    width: 100%;
 }
 
 .card {
