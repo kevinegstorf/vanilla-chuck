@@ -101,8 +101,7 @@ const idbApp = (function() {
             li.classList.add("card");
             const parent = document.getElementById("joke-placeholder");
             parent.appendChild(li);
-            li.innerHTML =
-              "no joke selected go to the home page to select a joke";
+            li.innerHTML = `no joke selected go to the <a href=${window.location.origin}/index.html>home page</a> to select a joke`;
           }
         })
         .catch(err => {
