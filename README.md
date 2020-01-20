@@ -32,26 +32,31 @@ security requirements:
 - fix bug when no there are no saved jokes√
 - removed rendered saved jokes when clear button is pressed
 - update service worker√
+- create reusable joke card√
+- remove single joke from list √
+- show no jokes selected and add link that redirects to homepage √
+- clean up file structure √
 
-### Monday
+### Tuesday
 - fix form styles
-- create reusable joke card
 - add joke search feature 
-- remove single joke from list
-
+- animate removing card
+- Add modernizer 
 
 ## 
-- show no jokes selected and redirect to home
+- create user in DB 
+- store user from register page
+- login with stored user
 - Change order jokes
+- logout
+- basic validation
+- scroll back to top button after x height
 - form validation clientside
 - form validation from db error returnen
-- create user in DB 
 - make PW salt with date.now
 - Basic login with salt based on created at date
 - Add base64 https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
-- logout
 - make route only visible when logged in
-- clean up file structure √
 - login should have a session time
 - password needs criterea
     Passwords must include one increasing straight of at least three letters, like abc , cde , fgh ,
@@ -63,10 +68,8 @@ security requirements:
     Passwords can only contain lower case alphabetic characters.
 
 - Create checklist for exam
-- Add modernizer 
 - Add tests
 - Add Webworkers for invinite scroll
-- scroll back to top button after x height
 
 
 
