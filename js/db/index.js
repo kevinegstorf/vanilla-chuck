@@ -89,11 +89,9 @@ const idbApp = (function() {
         .getAll()
         .then(e => {
           e.map(joke => {
-            const li = document.createElement("li");
-            li.classList.add("card");
             const parent = document.getElementById("joke-placeholder");
-            parent.appendChild(li);
-            li.innerHTML = joke.joke;
+            let selected = true;
+            parent.appendChild(renderJoke(joke, selected));
             hasJokes = true;
           });
         })
@@ -122,6 +120,15 @@ const idbApp = (function() {
     });
   }
 
+  function removeJoke(joke) {
+    dbPromise.then(function(db) {
+      const tx = db.transaction("jokes", "readwrite");
+      const store = tx.objectStore("jokes");
+      store.delete(joke.id);
+      return tx.complete;
+    });
+  }
+
   function removeAllJokes() {
     dbPromise.then(function(db) {
       const tx = db.transaction("jokes", "readwrite");
@@ -140,6 +147,7 @@ const idbApp = (function() {
     addJokes: addJokes,
     getAllJokes: getAllJokes,
     saveJoke: saveJoke,
-    removeAllJokes: removeAllJokes
+    removeAllJokes: removeAllJokes,
+    removeJoke: removeJoke
   };
 })();

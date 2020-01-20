@@ -31,12 +31,14 @@ security requirements:
 - remove console logs√
 - fix bug when no there are no saved jokes√
 - removed rendered saved jokes when clear button is pressed
+- update service worker√
 
 ### Monday
-- refactor 
-- fix styles
-    - add joke search feature 
-- fix SW clear cache bug(1/2)
+- fix form styles
+- create reusable joke card
+- add joke search feature 
+- remove single joke from list
+
 
 ## 
 - show no jokes selected and redirect to home

@@ -13,7 +13,7 @@ const filesToCache = [
   "pages/offline.html"
 ];
 
-const staticCacheName = "vanilla-chuck-pages-cache-v6.0.4";
+const staticCacheName = "vanilla-chuck-pages-cache-v7";
 
 self.addEventListener("install", event => {
   self.skipWaiting();

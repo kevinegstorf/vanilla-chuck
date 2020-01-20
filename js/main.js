@@ -24,43 +24,12 @@ function makeJokesCollection(data) {
   });
 }
 
-function renderJoke(joke, i) {
-  // creates elements to make Joke Card
-  const li = document.createElement("li");
-  const div = document.createElement("div");
-  const div2 = document.createElement("div");
-  const p = document.createElement("p");
-
-  // adds classes to created elements for Joke
-  li.classList.add("card");
-  div2.classList.add("unchecked-heart");
-  div2.setAttribute("id", i);
-
-  // Adds Empty Heart icon to Joke Card
-  div2.innerHTML = "&#9825";
-
-  // Adds Joke to paragraph element
-  p.innerText = joke.joke;
-
-  // Appending Children to build Card element correctly
-  div.appendChild(p);
-  li.appendChild(div);
-  li.appendChild(div2);
-
-  // Heart icon Click Handler to toggle favorite Joke.
-  div2.addEventListener("click", e => {
-    e.preventDefault();
-    div2.innerHTML === "♥" ? (div2.innerHTML = "♡") : (div2.innerHTML = "♥");
-    idbApp.saveJoke(joke);
-  });
-  return li;
-}
-
 function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
 
-  jokes.map((joke, i) => {
-    ul.appendChild(renderJoke(joke, i));
+  jokes.map(joke => {
+    // renderJoke comes from the file render_joke.js
+    ul.appendChild(renderJoke(joke));
   });
 }
 
