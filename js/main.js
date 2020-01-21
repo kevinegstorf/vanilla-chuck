@@ -14,12 +14,11 @@ function makeJokesCollection(data) {
     // formats text string correctly
 
     return {
-      id: joke.id,
+      ...joke,
       joke: joke.joke
         .replace(/&quot;/g, '"')
         .split(".")
-        .join(". "),
-      categories: joke.categories
+        .join(". ")
     };
   });
 }
@@ -27,7 +26,7 @@ function makeJokesCollection(data) {
 function renderJokes(jokes) {
   const ul = document.querySelector(".jokes-contianer");
 
-  jokes.map(joke => {
+  jokes.forEach(joke => {
     // renderJoke comes from the file render_joke.js
     ul.appendChild(renderJoke(joke));
   });
@@ -49,5 +48,3 @@ jokesButton.addEventListener(
   },
   false
 );
-
-Test();

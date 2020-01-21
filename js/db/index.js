@@ -111,11 +111,45 @@ const idbApp = (function() {
   }
 
   function saveJoke(joke) {
-    dbPromise.then(function(db) {
+    return dbPromise.then(function(db) {
       const tx = db.transaction("jokes", "readwrite");
       const store = tx.objectStore("jokes");
       store.add(joke);
       return tx.complete;
+    });
+  }
+
+  function findJoke(keyword) {
+    return dbPromise.then(function(db) {
+      var tx = db.transaction("jokes", "readonly");
+      var store = tx.objectStore("jokes");
+      store
+        .getAll()
+        .then(res => {
+          const keywords = [keyword];
+          let hits = [];
+          let containsAll;
+
+          for (let i = 0; i < res.length; i++) {
+            containsAll = true;
+            for (var j = 0; j < keywords.length; j++) {
+              if (res[i].joke.indexOf(keywords[j]) === -1) {
+                containsAll = false;
+                break;
+              }
+            }
+
+            if (containsAll) hits.push(res[i]);
+          }
+          return hits;
+        })
+        .then(res => {
+          return res.map(item => {
+            const parent = document.getElementById("joke-placeholder");
+            let selected = true;
+            return parent.appendChild(renderJoke(item, selected));
+          });
+        });
     });
   }
 
@@ -147,6 +181,7 @@ const idbApp = (function() {
     getAllJokes: getAllJokes,
     saveJoke: saveJoke,
     removeAllJokes: removeAllJokes,
-    removeJoke: removeJoke
+    removeJoke: removeJoke,
+    findJoke: findJoke
   };
 })();

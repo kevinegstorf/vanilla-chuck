@@ -44,6 +44,7 @@ security requirements:
 - Add modernizer 
 
 ## 
+- add badge to favorite navigation when joke is added
 - create user in DB 
 - store user from register page
 - login with stored user
