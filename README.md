@@ -36,14 +36,18 @@ security requirements:
 - remove single joke from list √
 - show no jokes selected and add link that redirects to homepage √
 - clean up file structure √
+- add basic joke search feature√
 
 ### Tuesday
 - fix form styles
-- add joke search feature 
 - animate removing card
 - Add modernizer 
 
 ## 
+- fix bugs for search feature
+    - show no results when non where found
+    - fix capital letter problem
+    - remove capital letter from first char input field
 - add badge to favorite navigation when joke is added
 - create user in DB 
 - store user from register page

@@ -28,35 +28,39 @@
 </head>
 
 <body>
-    <main class="container">
-        <!-- TODO check nav with a over ul with li -->
-        <nav>
-            <ul>
-                <li class="selected-page"><a href="index.html">Home</a></li>
-                <li><a href="/pages/favorite_jokes.html">Favorites</a></li>
-                <li><a href="/pages/login.html">Login</a></li>
-            </ul>
-        </nav>
-        <figure>
-            <picture>
-                <source media="(min-width: 750px)" srcset="./assets/images/chuck_uzi.jpg,
-                ./assets/images/chuck_texas.jpg" />
-                <source media="(min-width: 500px)" srcset="./assets/images/chuck_texas.jpg" />
-                <img aria-label="image of the legend Chuck Norris" src="./assets/images/chuck_karate.jpg"
-                    alt="image of chuck norris">
-            </picture>
-            <figcaption>Chuck!</figcaption>
-        </figure>
-        <h1>Vanilla Chuck!</h1>
-        <h2>🥋 👊 💥 💀</h2>
-        <button focus id="jokes" ontouchstart>get jokes</button>
-        <div class="scroll-info-placeholder"></div>
-        <section>
-            <ul aria-label="jokes container" class="jokes-contianer"></ul>
-        </section>
-    </main>
+    <div class="container">
+        <header class="container">
+            <nav>
+                <ul>
+                    <li class="selected-page"><a href="index.html">Home</a></li>
+                    <li><a href="/pages/favorite_jokes.html">Favorites</a></li>
+                    <li><a href="/pages/login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Chuck Jokes!</h1>
+            <h2>🥋 👊 💥 💀</h2>
+            <div class="image-wrapper">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 750px)" srcset="./assets/images/chuck_uzi.jpg,
+                        ./assets/images/chuck_texas.jpg" />
+                        <source media="(min-width: 500px)" srcset="./assets/images/chuck_texas.jpg" />
+                        <img aria-label="image of the legend Chuck Norris" src="./assets/images/chuck_karate.jpg"
+                            alt="image of chuck norris">
+                    </picture>
+                </figure>
+            </div>
+            <button focus id="jokes" ontouchstart>get jokes</button>
+            <div class="scroll-info-placeholder"></div>
+            <section>
+                <ul aria-label="jokes container" class="jokes-contianer"></ul>
+            </section>
+        </main>
 </body>
-<script src="js/main.js"></script>
+<script src="js/main.es5.js"></script>
+</div>
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
